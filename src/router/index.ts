@@ -1,12 +1,12 @@
-import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
-import TheGame from '@/views/TheGame.vue';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import TheGame from '@/modules/the-game/views/TheGame.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'TheGame',
     component: TheGame
-  },
+  }
 ]
 
 const router = createRouter({
