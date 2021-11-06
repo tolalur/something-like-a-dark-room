@@ -1,5 +1,5 @@
-import { MainLogMessageType } from '../models/main-log-message-type'
-import { MainLogState } from '../store/main-log'
+import { MainLogMessageType } from '../../models/main-log-message-type'
+import { MainLogState } from '../../store/main-log'
 
 export class TheLog {
   store: MainLogState;

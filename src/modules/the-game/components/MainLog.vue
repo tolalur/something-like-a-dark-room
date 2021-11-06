@@ -12,7 +12,6 @@
 import LogMessage from './LogMessage.vue'
 import { useMainLogStore } from '@/modules/the-game/store/main-log'
 import { storeToRefs } from 'pinia'
-import { MainLogMessageType } from '../models/main-log-message-type'
 
 const store = useMainLogStore()
 const { data } = storeToRefs(store)

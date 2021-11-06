@@ -1,9 +1,14 @@
 <template>
-  <button class="border border-gray-400 p-1 mb-3 rounded">
+  <button
+    class="border border-gray-400 p-1 rounded"
+    @click="onClick"
+  >
     <slot />
   </button>
 </template>
 
 <script lang="ts" setup>
-
+defineProps<{
+  onClick:() => void;
+}>()
 </script>
