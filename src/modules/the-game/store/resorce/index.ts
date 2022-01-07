@@ -89,6 +89,7 @@ export const useResorceStore = defineStore('resorce-store', {
       } else {
         clearInterval(resorce.miningTimer)
         resorce.miningTimer = undefined
+        resorce.miningCycleCount = 0
       }
     },
 
