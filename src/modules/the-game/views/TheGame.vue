@@ -4,7 +4,11 @@
       The Game
     </h2>
     <div class="flex justify-end">
-      <span>{{ store.resorceName }}: {{ store.data }} / {{ store.resorceLimit }}</span>
+      <span
+        v-for="resorce in store.data"
+        :key="resorce.id"
+        class="pl-5"
+      >{{ resorce.name }}: {{ resorce.amount }} / {{ resorce.limit }}</span>
     </div>
     <div class="flex mt-4">
       <main-log />
@@ -16,11 +20,11 @@
 <script lang="ts" setup>
 import MainLog from '../components/MainLog.vue'
 import MainActions from '../components/MainActions.vue'
-import { getGame } from '../entity/the-game.class'
 import { useResorceStore } from '../store/resorce'
+import { useGameStore } from '../store/the-game'
 
 const store = useResorceStore()
-const theGame = getGame()
+const theGame = useGameStore()
 theGame.init()
 </script>
 

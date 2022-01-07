@@ -1,0 +1,47 @@
+{
+    "baseResorceId": "wood",
+    "resorces": {
+        "wood": {
+            "id": "wood",
+            "name": "Дерево",
+            "limit": 1000,
+            "increaseRate": 1,
+            "miningRate": 4,
+            "miningDuration": 10,
+            "amount": 0,
+            "type": "base"
+        },
+        "hut": {
+            "id": "hut",
+            "name": "Хижина",
+            "limit": 4,
+            "increaseRate": 1,
+            "miningRate": 1,
+            "miningDuration": 5,
+            "amount": 0,
+            "type": "building",
+            "cost": [
+                {
+                    "type": "wood",
+                    "value": 10
+                }
+            ]
+        },
+        "gild": {
+            "id": "gild",
+            "name": "Мастерская",
+            "limit": 1,
+            "increaseRate": 1,
+            "miningRate": 1,
+            "miningDuration": 15,
+            "amount": 0,
+            "type": "building",
+            "cost": [
+                {
+                    "type": "wood",
+                    "value": 30
+                }
+            ]
+        }
+    }
+}

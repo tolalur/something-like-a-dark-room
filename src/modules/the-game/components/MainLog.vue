@@ -15,6 +15,12 @@ import { storeToRefs } from 'pinia'
 
 const store = useMainLogStore()
 const { data } = storeToRefs(store)
+
+store.$onAction(({ name, store }) => {
+  if (name === 'log' && store.data.length > 45) {
+    store.data = store.data.slice(-30)
+  }
+})
 </script>
 
 <style>
