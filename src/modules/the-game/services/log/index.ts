@@ -2,7 +2,7 @@ import { MainLogMessageType } from '../../models/main-log-message-type'
 import { MainLogState } from '../../store/main-log'
 
 export class TheLog {
-  store: MainLogState;
+  private store: MainLogState;
 
   constructor (store: MainLogState) {
     this.store = store
@@ -20,7 +20,7 @@ export class TheLog {
     this.log(message, MainLogMessageType.WARNING)
   }
 
-  log (text: string, type: MainLogMessageType): void {
-    this.store.data.push({ text, type })
+  private log (text: string, type: MainLogMessageType): void {
+    this.store.log && this.store.log(text, type)
   }
 }

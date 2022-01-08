@@ -34,7 +34,6 @@ const increaseResource = (resorce: number, rate: number): number => {
 }
 
 export type TResorceStore = Record<TResorceKeys, TResorceStoreItem>;
-
 export const useResorceStore = defineStore('resorce-store', {
   state: () => ({
     data: {} as TResorceStore

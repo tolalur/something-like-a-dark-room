@@ -2,7 +2,8 @@ import { defineStore } from 'pinia'
 import { MainLogMessage, MainLogMessageType } from '@/modules/the-game/models/main-log-message-type'
 
 export type MainLogState = {
-  data: MainLogMessage[]
+  data: MainLogMessage[],
+  log?(text: string, type: MainLogMessageType): void
 }
 
 export const useMainLogStore = defineStore('main-log', {

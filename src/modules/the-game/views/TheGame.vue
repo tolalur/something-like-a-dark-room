@@ -5,7 +5,7 @@
     </h2>
     <div class="flex justify-end">
       <span
-        v-for="resorce in store.data"
+        v-for="resorce in resorceStore.data"
         :key="resorce.id"
         class="pl-5"
       >{{ resorce.name }}: {{ resorce.amount }} / {{ resorce.limit }}</span>
@@ -23,7 +23,7 @@ import MainActions from '../components/MainActions.vue'
 import { useResorceStore } from '../store/resorce'
 import { useGameStore } from '../store/the-game'
 
-const store = useResorceStore()
+const resorceStore = useResorceStore()
 const theGame = useGameStore()
 theGame.init()
 </script>

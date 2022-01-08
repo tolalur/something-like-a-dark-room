@@ -1,22 +1,22 @@
-// import { useMainLogStore } from '../store/main-log'
-// import { useResorceStore } from '../store/resorce'
-// import { TheLog } from './log'
-// import { BaseResorce } from './resorce'
+import { useMainLogStore } from '../store/main-log'
+import { TheLog } from './log'
 
-// export interface IGameServiceProvider {
-//   log: TheLog,
-//   resorce: BaseResorce
-// }
+export interface IGameServiceProvider {
+  log: TheLog,
+}
 
-// export const provider = () => {
-//   const store = useResorceStore()
-//   const logStore = useMainLogStore()
+let serviceProvider: IGameServiceProvider
 
-//   const logService = new TheLog(logStore)
-//   const resorceService = new BaseResorce(store, logService)
+export const Provider = (): IGameServiceProvider => {
+  if (serviceProvider == null) {
+    const logStore = useMainLogStore()
 
-//   return {
-//     log: logService,
-//     resorce: resorceService
-//   }
-// }
+    const logService = new TheLog(logStore)
+
+    serviceProvider = {
+      log: logService
+    }
+  }
+
+  return serviceProvider
+}

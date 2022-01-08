@@ -10,7 +10,6 @@ export type TGameStore = {
 /**
  * Сделать сервис, который будет читать из конфига id базового ресурса
  */
-
 export const useGameStore = defineStore('main-game', {
   state: () => ({
     data: 0,
